@@ -24,4 +24,9 @@ public class ToDo {
         this();
         this.description = description;
     }
+
+    public ToDo(String description, boolean completed) {
+        this.description = description;
+        this.completed = completed;
+    }
 }

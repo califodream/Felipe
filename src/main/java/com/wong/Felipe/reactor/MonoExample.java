@@ -12,11 +12,11 @@ import reactor.core.scheduler.Schedulers;
 
 import java.time.Duration;
 
-@Configuration
+//@Configuration
 public class MonoExample {
-    private static Logger LOG = LoggerFactory.getLogger(MonoExample.class);
+    private final static Logger LOG = LoggerFactory.getLogger(MonoExample.class);
 
-    @Bean
+    //@Bean
     public CommandLineRunner runMonoExample() {
         return args -> {
             MonoProcessor<ToDo> promise = MonoProcessor.create();
