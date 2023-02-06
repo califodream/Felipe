@@ -2,12 +2,16 @@ package com.wong.Felipe.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Data
+@Document
 public class ToDo {
+    @Id
     private String id;
     private String description;
     @JsonFormat(pattern = "yyyy:MM:dd HH:mm:ss", timezone = "GMT+8")

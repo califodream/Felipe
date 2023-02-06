@@ -19,6 +19,8 @@ public class ToDoRouter {
                         toDoHandler::getToDo)
                 .andRoute(RequestPredicates.GET("/todos")
                                 .and(RequestPredicates.accept(MediaType.APPLICATION_JSON)),
-                        toDoHandler::getToDos);
+                        toDoHandler::getToDos)
+                .andRoute(RequestPredicates.POST("/todo")
+                        .and(RequestPredicates.accept(MediaType.APPLICATION_JSON)),toDoHandler::newTodo);
     }
 }
