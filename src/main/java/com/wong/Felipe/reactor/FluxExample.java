@@ -13,7 +13,7 @@ import reactor.core.scheduler.Schedulers;
 import java.time.Duration;
 import java.util.List;
 
-@Configuration
+//@Configuration
 public class FluxExample {
     private final static Logger LOG = LoggerFactory.getLogger(FluxExample.class);
 

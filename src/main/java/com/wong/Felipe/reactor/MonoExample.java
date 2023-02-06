@@ -16,7 +16,7 @@ import java.time.Duration;
 public class MonoExample {
     private final static Logger LOG = LoggerFactory.getLogger(MonoExample.class);
 
-    //@Bean
+    @Bean
     public CommandLineRunner runMonoExample() {
         return args -> {
             MonoProcessor<ToDo> promise = MonoProcessor.create();

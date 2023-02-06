@@ -1,5 +1,6 @@
 package com.wong.Felipe.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -9,7 +10,9 @@ import java.util.UUID;
 public class ToDo {
     private String id;
     private String description;
+    @JsonFormat(pattern = "yyyy:MM:dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime created;
+    @JsonFormat(pattern = "yyyy:MM:dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime modified;
     private boolean completed;
 
@@ -26,6 +29,7 @@ public class ToDo {
     }
 
     public ToDo(String description, boolean completed) {
+        this();
         this.description = description;
         this.completed = completed;
     }
